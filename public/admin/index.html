@@ -6,12 +6,14 @@
     <title>Content Manager</title>
   </head>
   <body>
-    <!-- Decap CMS -->
+    <script>
+      // decap-cms 자동 실행을 막고, 우리가 직접 init 하게 만듦
+      window.CMS_MANUAL_INIT = true;
+    </script>
+
     <script src="https://unpkg.com/decap-cms@3/dist/decap-cms.js"></script>
 
     <script>
-      // 핵심: config.yml을 절대경로로 지정
-      window.CMS_MANUAL_INIT = true;
       window.addEventListener("load", function () {
         CMS.init({ config: "/admin/config.yml" });
       });
