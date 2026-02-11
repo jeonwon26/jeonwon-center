@@ -1,22 +1,14 @@
 <!doctype html>
-<html>
+<html lang="ko">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Content Manager</title>
+
+    <!-- 핵심: /admin/을 기준 경로로 고정 -->
+    <base href="/admin/" />
   </head>
   <body>
-    <script>
-      // decap-cms 자동 실행을 막고, 우리가 직접 init 하게 만듦
-      window.CMS_MANUAL_INIT = true;
-    </script>
-
     <script src="https://unpkg.com/decap-cms@3/dist/decap-cms.js"></script>
-
-    <script>
-      window.addEventListener("load", function () {
-        CMS.init({ config: "/admin/config.yml" });
-      });
-    </script>
   </body>
 </html>
